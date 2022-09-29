@@ -1,0 +1,99 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<header>
+    <style>
+    
+        label#email-error {
+            position: relative;
+            top: -18px;
+            color: red;
+            font-size: 18px;
+        }
+        
+        label#name-error {
+            position: relative;
+            top: -20px;
+            color: red;
+            font-size: 18px;
+        }
+        
+        
+        label#phone-error {
+            position: relative;
+            top: -18px;
+            color: red;
+            font-size: 18px;
+        }
+        
+        label#date-error {
+            position: relative;
+            top: -10px;
+            color: red;
+            font-size: 18px;
+        }
+        </style>
+    <section id="header">
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <img src="{% static 'images/exploe-removebg-preview.png' %}" width="178px" height="70px" alt="It is a logo.">
+                </div>
+                <div class="tabs">
+                    <nav>
+                        <ul id="nav">
+                            <li class="btn"><a href="{% url 'home' %}">HOME</a></li>
+                            <li class="btn "><a href="{% url 'about' %}">ABOUT US</a></li>
+                            <li class="btn"><a href="{% url 'home' %}">CONTACT US</a></li>
+                            <li class="btn"><a href="{% url 'faqs' %}">FAQs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<div class="container">
+    <div id="form-hdng">
+        <p id="avaibility">
+            Book your seat for {{ form_data.destination_name }}
+        </p>
+    </div>
+<form action="{% url 'booking' %}" method="post" id="booking_form">
+    {% csrf_token %}
+    <div class="elem-group">
+        <label for="dest" name="dest">Destination</label>
+        <input type="text" id="name" name="dest" placeholder="{{ form_data.destination_name }}" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+    <div class="elem-group">
+      <label for="name"> Name</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" pattern=[A-Z\sa-z]{3,20} required>
+    </div>
+    <div class="elem-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="abc@email.com" required>
+    </div>
+    <div class="elem-group">
+      <label for="phone">Phone Number</label>
+      <input type="number" id="phone" name="phone" placeholder="Phone Number" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+      <label for="checkin">Departure Date</label>
+      <input type="date" id="date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkout">Arrival Date</label>
+      <input type="date" id="date" name="checkout" required>
+    </div>
+    <hr>
+    <button type="submit" style="background-color: #202846; padding: 10px 248px; color: white; font-size: 18px;"><a href="{% url 'thanks' %}"></a>Submit</a></button>
+  </form>
+  <footer>
+    <div class="container">
+        <p class="copyright">
+            © 2022 Explore Pakistan,All Rights Reserved.
+        </p>
+    </div>
+</footer>
+{% endblock %}

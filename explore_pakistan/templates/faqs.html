@@ -1,0 +1,117 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <header>
+        <section id="header">
+            <div class="container">
+                <div class="flex">
+                    <div class="logo">
+                        <img src="{% static 'images/exploe-removebg-preview.png'%}" width="178px" height="70px" alt="It is a logo.">
+                    </div>
+                    <div class="tabs">
+                        <nav>
+                            <ul id="nav">
+                                <li class="btn"><a href="{% url 'home' %}">HOME</a></li>
+                                <li><a href="{% url 'about' %}" class="btn">ABOUT US</a></li>
+                                <li class="btn"><a href="{% url 'contact' %}">CONTACT US</a></li>
+                                <li class="btn active"><a href="{% url 'faqs' %}">FAQs</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="section_one">
+        <div class="container">
+            <div class="destination">
+                <p>FAQs</p>
+            </div>
+        </div>
+    </section>
+    <section id="faqs">
+        <div class="container">
+    <div class="accordian">
+        <p>Do you provide any food or drinks?</p>
+        <div>
+            <p>
+                With each set up there will be a bottle of water per individual scheduled. At the moment we do offer a Fruit,Cheese,and Meat Board that does cost extra.
+            </p>
+        </div>
+        <p>How far in advance should I scheduled my picnic?</p>
+        <div>
+            <p>You can schedule as for in advance as you please however, the least amount of time we allow an appointment to be made is 72 hours from the moment you are  looking.</p>
+        </div>
+        <p>Can I bring my own food?</p>
+        <div>
+            <p>
+                Yes, of course, you can!
+            </p>
+        </div>
+        <p>Where do you guys host picnics at?</p>
+        <div>
+            <p>
+                We cna host your picnic anywhere in the Pakistan. We can place your picnic at a public parks, Historical places and beautiful places.
+            </p>
+        </div>
+        <p>What happens if the weather is bad on my scheduled picnic date?</p>
+        <div>
+            <p>
+                We know that weather can be very unpredictable and if it so happens that the day which scheduled that the weather has become unsuitable for the event then it will be canceled. And placed towards scheduling another date.
+            </p>
+        </div>
+        <p>What is the cancellation policy?</p>
+        <div>
+            <p>We understand that things may happen in life that influences the need to cancel your picnic. If this is the case you are free to cancel your picnic any time before LP's 48 hours (2 days) cancellation grace period in order to receive a full refund. If at the moment you need to cancel falls behind LP's given 48 hour (2 days) grace period then clients will be charged a 10% cancellation fee. This charge will go towards the payment submitted during your initial booking. The remaining balance will be refunded and can take 3-5 business days to show in your bank account.  </p>
+        </div>
+        <p>How does it all work?</p>
+        <div>
+            <p>
+                Simply fill out a booking form with your choice of package, theme, preferred location, add-ons, and any extra details for your picnic. We will then send you an invoice with the price of your picnic.A 50% deposit (paid by e-transfer) is required to hold your requested booking
+            </p>
+        </div>
+        <p>Can I make changes to my booking?</p>
+        <div>
+            <p>Please let us know 7 days before your picnic if you would like to change your package, theme, add-ons, or number of guests so we can make the proper arrangements.If you choose to remove an add-on, lower your guest list, or opt for a package lower than the originally paid amount, we will not provide a refund. </p>
+        </div>
+        <p>I want to go on the Silk Road Tour. Will the border with China be open?</p>
+        <div>
+            <p>Pakistan has had an excellent partnership with China for decades. The pass closure related to the war in Afghanistan should be of short duration. Silk Road participants should know that the pass is occasionally closed due to late-spring or early-fall snow falls. Open from 1sth May and closed end of October.</p>
+        </div>
+        <p>Are there any dressing prohibitions in Skardu?</p>
+        <div>
+            <p>Yes, if you wish to respect the local culture (and we hope that you will), there are a few things you should avoid. Leave home Lycra, tight fitting pants of any kind, shorts and any skirt shorter than ankle length.  The savvy traveler would also avoid things with blatant western slogans.</p>
+        </div>
+        <p>What are meals like on road tours or before/after treks?</p>
+        <div>
+            <p>In larger restaurants and hotels, menus usually include a variety of western and Pakistani dishes and some vegetables, boxed juices, and fruits. Smaller cafes offer lentil-based dishes (dal) with meat. Tea, bottled water and soft drinks are available in all cafes and restaurants. Coffee is almost always “instant,” but the teas are excellent.</p>
+        </div>
+        <p>What can I do to prepare for high altitude before leaving home?</p>
+        <div>
+            <p>
+                Physical conditioning is important for all of our treks. Being in good physical condition may help you acclimatize more easily, and it will certainly help you enjoy trekking more. If you are lucky enough to live in the mountains, spend as much time at high altitude as you can in the four weeks prior to your trek. Any exercise that strengthens your lungs will be helpful no matter where you live..
+            </p>
+        </div>
+        <p>What kind of transportation will we use?</p>
+        <div>
+            <p>
+                The vehicle used depends on the size of the group and the quality of the roads. When on major roads in the south, as for the Grand Trunk Road Odyssey, we use medium size buses or minivans. These are very comfortable and usually have air-conditioning. On smaller roads in the north, groups typically switch to smaller vehicles like jeeps. For most of the treks, the last leg of travel to the trailhead is in a Jeep 4x4 or Toyota Land cruiser 4x4. These have extended back seats, and provide a fairly comfortable ride on very exciting and interesting roads. All of the drivers we employ are trusted professionals.
+            </p>
+        </div>
+        <p>How long is a typical driving day?</p>
+        <div>
+            <p>
+                For jeep and culture tours, we try to keep driving hours consistent and as short as possible. A 4-6 hour driving day is somewhat typical. Sometimes, however, villages are a long way apart and we must lengthen the day to reach a suitable hotel. Many of the treks involve a flight or drive to the start of the trek. If the flight is canceled due to poor weather, the drive becomes necessary. These drives can be as long as 10 or 11 hours in a single day.
+            </p>
+        </div>
+    </div>
+    </div>
+    </section> 
+    <footer>
+    <div class="container">
+        <p class="copyright">
+            © 2022 Explore Pakistan,All Rights Reserved.
+        </p>
+    </div>
+    </footer>
+{% endblock %}

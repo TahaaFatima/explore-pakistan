@@ -1,0 +1,112 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <header>
+        <style>
+        img#pakflag {
+            width: 240px;
+            height: 240px;
+            border-radius: 118px;
+        }
+        p.mp:hover {
+    background: gray;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+        </style>
+        <section id="header">
+            <div class="container">
+                <div class="flex">
+                    <div class="logo">
+                        <img src="{% static 'images/exploe-removebg-preview.png' %}" width="178px" height="70px" alt="It is a logo.">
+                    </div>
+                    <div class="tabs">
+                        <nav>
+                            <ul id="nav">
+                                <li class="btn"><a href="{% url 'home' %}">HOME</a></li>
+                                <li class="btn active"><a href="{% url 'about' %}">ABOUT US</a></li>
+                                <li class="btn"><a href="{% url 'contact' %}">CONTACT US</a></li>
+                                <li class="btn"><a href="{% url 'faqs' %}">FAQs</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="cntct">
+        <div class="container">
+            <div id="info">
+                <p id="personl-info">
+                    Personal Information
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="cntct-info">
+        <div class="container">
+            <div class="our-info">
+                <div class="pro-img">
+                    <img src="{% static 'images/pakflag.png' %}" alt="" id="pakflag">
+                </div>
+                <div class="about">
+                    <div id="name">
+                        <P class="name">
+                            Explore Pakistan
+                        </P>
+                        <hr>
+                    </div>
+                    <div id="numbr">
+                        <P class="numbr">
+                            Mobile phone:
+                            <a href="tel:021349872">021349872</a>
+                        </P>
+                        <hr>
+                    </div>
+                    <div id="mail">
+                        <P class="mail">
+                            Email:
+                            <a href="mailto:explorepakistan1234@gmail.com">explorepakistan1234@gmail.com</a>
+                        </P>
+                        <hr>
+                    </div>
+                    <div id="facebook">
+                            <p class="facebook">
+                                Facebook:
+                                <a href="www.facebook.com">Explore Pakistan</a>
+                            </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="map">
+        <div class="container">
+           <div class="map">
+               <div id="name">
+                   <P class="mp">
+                       find us from here
+                   </P>
+               </div>
+               <div class="location">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.068358078511!2d73.46760031470772!3d34.348738309495346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                   1!3m3!1m2!1s0x38e09e0157389df9%3A0xf40dc84ff8085a4f!2sPearl%20Continental%20Muzaffarabad!5e0!3m2!1sen!2s!4v1655242207582!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+           </div>
+        </div>
+   </section>
+   <section id="about_us">
+        <div class="container">
+            
+        </div>
+   </section>
+    <footer>
+        <div class="container">
+            <p class="copyright">
+                © 2022 Explore Pakistan,All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+{% endblock %}

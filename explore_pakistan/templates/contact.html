@@ -1,0 +1,124 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <header>
+        <style>
+            label#fname-error {
+    position: relative;
+    top: -19px;
+    color: red;
+    font-size: 18px;
+}
+
+label#lname-error {
+    position: relative;
+    top: -18px;
+    color: red;
+    font-size: 18px;
+}
+
+label#emails-error {
+    position: relative;
+    top: -18px;
+    color: red;
+    font-size: 18px;
+}
+
+label#msg-error {
+    position: relative;
+    top: -23px;
+    color: red;
+    font-size: 18px;
+}
+        </style>
+        <section id="header">
+            <div class="container">
+                <div class="flex">
+                    <div class="logo">
+                        <img src="{% static 'images/exploe-removebg-preview.png' %}" width="178px" height="70px" alt="It is a logo.">
+                    </div>
+                    <div class="tabs">
+                        <nav>
+                            <ul id="nav">
+                                <li class="btn"><a href="{% url 'home' %}">HOME</a></li>
+                                <li class="btn "><a href="{% url 'about' %}">ABOUT US</a></li>
+                                <li class="btn active"><a href="{% url 'home' %}">CONTACT US</a></li>
+                                <li class="btn"><a href="{% url 'faqs' %}">FAQs</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="hdng-top">
+        <div class="container">
+            <h2>
+             About hotel
+            </h2>
+        </div>
+     </section>
+     <section id="img">
+           <div class="container">
+             <div class="contact-us">
+                <div class="img2">
+                 <img class="hotel" src="{% static 'images/continental-hotel-Muzaffarabad.jpg' %}"  width="400vh" alt="home"><br>
+                       <img class="bed-room" src="{% static 'images/bd-room.jpg' %}" alt="bed-room" width="400vh" height="330vh">
+                </div>
+                 <div id="hotel-para">
+                         <p id="hotel">
+                             Pearl-Continental Hotels & Resorts (also abbreviated to PC Hotels) is the largest chain of five-star hotels in Pakistan with properties in Karachi, Lahore, Rawalpindi,
+                             Peshawar, Gwadar, Bhurban, Muzaffarabad. and Malam Jabba.[1] Pearl-Continental Hotels is a subsidiary of Hashoo Group who also operate Marriott Hotels in Islamabad and Karachi
+                             The Pearl-Continental Hotel in Karachi was the first five-star hotel in Pakistan and has hosted various prominent figures from across the globe including Queen Elizabeth II, Nelson Mandela, King Hussain
+                              of Jordan, among others. It was a member of the Leading Hotels of the World for over a decade
+                         </p>
+                         <div class="bottom">
+                             <img class="living-room" src="{% static 'images/living-room.jpg' %}" alt="living-room" width="441px" height="279px">
+                              <img class="dining" src="{% static 'images/dining.jpg' %}" alt="dining" width="300vh">
+ 
+                         </div>
+                </div>
+                </div>
+           </div>
+     </section>
+     <section class="feedr" style="background-color: #202846; padding: 10px 0px 57px 0px; margin: 10px 0px;">
+        <div class="container">
+            <form action="{% url 'thanks' %}" method="post" id="contact_form">
+            {% csrf_token %}
+                <h1>Contact Us</h1>
+                <div class="info">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" placeholder="Enter Your First Name" required>
+                </div>
+
+                <div class="info">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" placeholder="Enter Your Last Name" required>
+                </div>
+
+                <div class="info">
+                    <label for="emails">Email Address</label>
+                    <input type="email" name="emails" placeholder="Enter Your Email Here" required>
+                </div>
+
+                <div class="info">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" name="phone" placeholder="Enter Your Number Here" required>
+                </div>
+                <p class="msg" style="font-size: 20px; font-weight: 400; color: #414141;">Message</p>
+                <div>
+                  <textarea rows="4" required name="msg"></textarea>
+                </div>
+                <button type="submit" class="buttonach" style="background-color: #202846; padding: 10px 248px; color: white; font-size: 18px;"><a href="{% url 'thanks' %}"></a>Submit</a></button>
+              </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+     <div class="container">
+         <p class="copyright">
+             © 2022 Explore Pakistan,All Rights Reserved.
+         </p>
+     </div>
+ </footer>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<header>
+    <section id="header">
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <img src="{% static 'images/exploe-removebg-preview.png' %}" width="178px" height="70px" alt="It is a logo.">
+                </div>
+                <div class="tabs">
+                    <nav>
+                        <ul id="nav">
+                            <li class="btn active"><a href="{% url 'home' %}">HOME</a></li>
+                            <li class="btn"><a href="{% url 'about' %}">ABOUT US</a></li>
+                            <li class="btn"><a href="{% url 'contact' %}">CONTACT US</a></li>
+                            <li class="btn"><a href="{% url 'faqs' %}">FAQs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+{% for destination in detail_data %}
+<section id="hidone">
+    <section id="section_twohead">
+        <div class="container">
+            <div class="section_two">
+                <div class="img">
+                    <img src="{{destination.destination_image.url}}" width="350px" height="241px"
+                     alt="Shangrila">
+                </div>
+                <div id="one2">
+                    <p class="heading">
+    
+                {{ destination.destination_name }}
+                    </p>
+                    <hr>
+                    <p class="content">
+                        {{ destination.destination_description }}
+                    </p>
+                    <p class="link">
+                        <a target="_blank" href="{% url 'form' destination.id %}">Book Now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+ {% endfor %}  
+{% endblock %}

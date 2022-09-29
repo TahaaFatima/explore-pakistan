@@ -1,0 +1,160 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<header>
+    <section id="header">
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <img src="{% static 'images/exploe-removebg-preview.png' %}" width="178px" height="70px" alt="It is a logo.">
+                </div>
+                <div class="tabs">
+                    <nav>
+                        <ul id="nav">
+                            <li class="btn active"><a href="{% url 'home' %}">HOME</a></li>
+                            <li class="btn"><a href="{% url 'about' %}">ABOUT US</a></li>
+                            <li class="btn"><a href="{% url 'contact' %}">CONTACT US</a></li>
+                            <li class="btn"><a href="{% url 'faqs' %}">FAQs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<section id="top">
+    <div class="container">
+        <div id="first">
+             <p class="top">
+                 Explore Pakistan         
+             </p>
+             <p class="pra">
+               " If you truly love nature,you will find beauty every where."
+             </p>
+        </div>
+    </div>
+</section>
+<section id="frst">
+    <div class="container">
+         <div class="second">
+            <img src="{% static 'images/collge.jpg' %}" height="500vh" width="800vh"> 
+            <img src="{% static 'images/paradise2.jpg' %}"  height="500vh" width="800vh">
+            <img src="{% static 'images/shngrila.png' %}" height="500vh" width="800vh">
+            <img src="{% static 'images/shngrila.png' %}" height="500vh" width="800vh">
+            <img src="{% static 'images/kashmir.jpg' %}" height="500vh" width="800vh">
+            <img src="{% static 'images/kumrat-valley.jpg' %}" height="500vh" width="800vh">
+            <img src="{% static 'images/fairy-meadows-trek-2.jpg' %}" height="500vh" width="800vh">
+            <img src="{% static 'images/slider-1.jpg' %}" height="500vh" width="800vh">
+         </div>
+         <div class="scnd">
+            <div id="quote">
+                <blockquote id="quote-1">
+                     The biggest adventure you can take is to live the life of your dreams....
+                     Emerson says that nature is beautiful because it is alive, moving, reproductive.So explore our beautiful country.....
+                </blockquote>
+             </div>
+             <div class="buttonhead">
+                 <a href="#section_one" class="button">Explore Pakistan...</a>
+             </div>
+        </div>    
+    </div>
+</section>
+<section id="thrd">
+<div class="container">
+    <div class="flexquote">
+    <div class="image">
+        <img src="{% static 'images/boat.jpg' %}" height="200vh" width="400vh">
+    </div>
+    <div class="para">
+        <p class="txt">
+            Nature has been found to have a calming quality on our stress levels. Beautiful natural surroundings and scenery can feel like worlds away from our home and work life and consequently causes us to put any associated stress on the back burner.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="section_one">
+    <div class="container">
+        <div class="destination">
+            <p>Beautiful Destinations</p>
+        </div>
+    </div>
+</section>    
+{% for province in province_data_info %}
+<section id="section_twohead">
+    <div class="container">
+        <div class="section_two">
+            <div class="img">
+                <img src="{{province.province_image.url}}" width="350px" height="241px" alt="Hunza Valley">
+            </div>
+            <div id="one1">
+                <p class="heading">
+                    {{province.province_name}}
+                </p>
+                <hr>
+                <p class="content">
+                   {{province.province_description}}
+                </p>
+
+                
+                <a href="{% url 'details' province.id %}" id="css" style="border-radius: 30px;background-color: #202846;color: white;font-size: 17px;font-weight: 700;margin: -20px 26px 30px 343px;padding: 10px 17px;
+            ">See Destinations</a> 
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+<section class="feed">
+    <div class="container">
+        <form method="post" action="{% url 'savetestimonial' %}">
+            {% csrf_token %}
+            <h1>Testimonals</h1>
+            <div class="info">
+              <input class="fname" type="text" name="name" placeholder="Full name" required>
+            </div>
+            <p>Message</p>
+            <div>
+              <textarea rows="4" required name="testimmonial"></textarea>
+            </div>
+            <input type="submit" class="buttonach" style="background: #202846; font-size: 16px; font-weight: 400; color: #fff;">
+            
+          </form>
+        </div>
+    </div>
+</section>
+<section id= "imonials">
+    <div class="container1">
+        <div class="second">
+            <div class="test">
+                <img src="{% static 'images/asli_dummy-pic.png' %}" alt="Avatar" style="width:200px" >
+                <p><span>Chris Fox</span> </p>
+                <p>I had great experience with the services provided by the team of Explore Pakistan. Every facility was good. People were very friendly and warm.</p>
+              </div>
+              <div class="test">
+                <img src="{% static 'images/pic1.jpg' %}" alt="Avatar" style="width:200px">
+                <p><span>Jordana Wilson</span> </p>
+                <p>Best service ..What we need all cover itinerary best Pcm tour service n Explore Pakistan also we recommend friends n family also Ferrari world is best memories the fastest roller coster </p>
+              </div>
+              <div class="test">
+                <img src="{% static 'images/pic2g.jpg' %}" alt="Avatar" style="width:200px">
+                <p><span>Ashish Singh</span></p>
+                <p>It was a wonderful trip arranged by Explore Pakistan. Everything was well organised and we didnt face any problem. We had a hassle free experience.</p>
+              </div>
+              <div class="test">
+                <img src="{% static 'images/profile.png' %}" alt="Avatar" style="width:200px">
+                <p><span>Jay Mewara</span></p>
+                <p>The trip was very well organized, the iteranary well planned, the driver was very polite and helpful. Kritika was very polite, helpful and available at all times to reach out to in case we needed...</p>
+              </div>
+        </div>
+</section>
+<footer>
+    <div class="container">
+        <p class="copyright">
+            © 2022 Explore Pakistan,All Rights Reserved.
+        </p>
+    </div>
+</footer>
+{% endblock %}
