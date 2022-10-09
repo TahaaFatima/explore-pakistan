@@ -20,6 +20,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('explore_pakistan/', include('explore_pakistan.urls')),
-     path('', include(('explore_pakistan.urls', 'explore_pakistan'), namespace='explore_pakistan')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include('explore_pakistan.urls')),
+    #  path('', include(('explore_pakistan.urls', 'explore_pakistan'), namespace='explore_pakistan')),
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)
