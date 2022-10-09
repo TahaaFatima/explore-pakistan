@@ -1,0 +1,186 @@
+*{
+   margin: 0px;
+   font-family: PT Sans;
+  
+}
+.container {
+      max-width: 1489px;
+      width: 80%;
+      margin: auto;
+}
+header {
+   position: sticky;
+   top: 0;
+   z-index: 1;
+}
+.flex {
+   display: flex;
+}
+#nav {
+   list-style-type: none;
+   display: flex;
+}
+#nav li:nth-child(1) {
+   padding: 17px 25px 17px 25px;
+   margin-left: 291px;
+}
+section#header {
+   background-color: #202846;
+   display: flex;
+}
+#nav li {
+   padding: 17px 0px 17px 0px;
+   margin-left: 4px;
+   font-weight: 700;
+   font-size: 24px;
+   align-items: center;
+   line-height: 31px;
+   text-align: center;
+}
+#nav .btn{
+   padding: 17px 25px 17px 25px;
+   margin-left: 4px;
+
+}
+a{
+   color: white;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 24px;
+}
+li a:hover {
+   color: white;
+   text-decoration: none;}
+
+
+
+
+
+
+h2 {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 62px;
+  color: #202846;
+  margin: 35px 0px;
+}
+
+p#hotel {
+   width: 743px;
+   height: 315px;
+   background: #C7C7C7;
+   line-height: 29px;
+   letter-spacing: 1px;
+   border: solid 2px gray;
+   margin: 0px 0px 8px 8px;
+   font-size: 22px;
+}
+.contact-us {
+   display: flex;
+   
+}
+img.hotel {
+   margin-bottom: 8px;
+}
+div#hotel-para {
+   margin-top: 2px;
+}
+
+.bottom img {
+   margin-left: 8px;
+}
+#nav li a .active{
+   border-bottom: 5px solid white;
+}
+.btn {
+   border: none;
+   outline: none;
+   padding: 10px 16px;
+   cursor: pointer;
+   font-size: 18px;
+ }
+ .active, .btn:hover {
+   border-bottom: 5px solid white;
+   background-color: #BDBDC6;
+   color: white;
+ }  
+ .bottom {
+   display: flex;
+}
+div#form-hdng {
+   font-size: 42px;
+   color: #202846;
+   font-weight: 700;
+   margin-top: 50px;
+   text-align: center;
+}
+p#avaibility {
+   font-size: 40px;
+   font-weight: 600;
+   background-color: #4431504f;
+   font-style: italic;
+   margin-right: 254px;
+   margin-left: 240px;
+   padding: 32px;
+   margin-bottom: 30px;
+}
+button.frm-btn {
+    background-color: #4431504f;
+    font-size: 22px;
+    border-radius: 10px;
+    color:  #202846;
+}
+div#form-2 {
+   background-color: #CECED8;
+   /* width: 580px; */
+   text-align: start;
+}
+p#Q {
+   font-size: 24px;
+   height: 60px;
+   padding-left: 30px;
+   padding-top: 17px;
+}
+.form-hotel {
+   padding-left: 25px;
+   display: flex;
+   font-size: 21px;
+   padding-bottom: 46px;
+}
+div#sbmt {
+   margin-left: 134px;
+   padding-bottom: 23px;
+}
+
+/* map */
+.map {
+   text-align: center;
+   margin-top: 70px;
+   margin-bottom: 100px;
+}
+div#name {
+   margin-bottom: 30px;
+}
+p.mp {
+   font-size: 40px;
+   font-weight: 600;
+   background-color: darkgray;
+   font-style: italic;
+   margin-right: 254px;
+   margin-left: 240px;
+   padding: 32px;
+}
+
+
+footer {
+   background-color: #202846;
+   color: white;
+   font-style: italic;
+}
+
+p.copyright {
+   padding: 20px 0px 20px 60px;
+}
+
